@@ -67,31 +67,33 @@ class WordGenerator():
                     seen_add(k)
                     yield element
 
-
-jumbledLetters = ""
-
-def displayMenu():
-    print('==================================')
-    print('\n1. Change Letters and Number of Letters \n2. Quit')       
-    print('==================================')
+        
 
 
-def userInput():
-    jumbledLetters = input("Enter the jumbled letters: ")
-    numberOfLettersInWord = int(input("Enter number of letters in words to generate: "))
-    wordGen = WordGenerator(jumbledLetters,numberOfLettersInWord)
+# jumbledLetters = ""
 
-    for word in wordGen.foundWords:
-        print(word)
+# def displayMenu():
+#     print('==================================')
+#     print('\n1. Change Letters and Number of Letters \n2. Quit')       
+#     print('==================================')
 
 
-def main():
-    userInput()
-    displayMenu()
-    response = int(input("Select Operation: "))
-    if response == 1:
-        main()
-    elif response == 2:
-        exit()
+# def userInput():
+#     jumbledLetters = input("Enter the jumbled letters: ")
+#     numberOfLettersInWord = int(input("Enter number of letters in words to generate: "))
+#     wordGen = WordGenerator(jumbledLetters,numberOfLettersInWord)
 
-main()
+#     for word in wordGen.foundWords:
+#         print(word)
+
+
+# def main():
+#     userInput()
+#     displayMenu()
+#     response = int(input("Select Operation: "))
+#     if response == 1:
+#         main()
+#     elif response == 2:
+#         exit()
+
+# main()
