@@ -1,12 +1,14 @@
-from flask import Flask, request
-import jsonify
+from flask import Flask, request, jsonify
+from wordGenerator import WordGenerator
 
 app = Flask(__name__)
 
 @app.route('/word', methods=['POST'])
 def word():
-  pass()
+  body = request.get_json()
+  wordGen = WordGenerator(body['letters'],body['numberOfLettersInWord'])
+  return jsonify(wordGen.foundWords)
   
   
- if __name__ == '__main__':
-  app.run(debug=True)
+if __name__ == '__main__':
+  app.run(debug=True, port=2020)
